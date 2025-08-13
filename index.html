@@ -1,0 +1,1021 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Professional Portfolio - Full Stack Developer & Designer">
+    <meta name="keywords" content="portfolio, developer, designer, web development, frontend, backend">
+    <meta name="author" content="Razan Kumar Sarraf">
+    
+    <title>RazanKumarSarraf - Portfolio</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts - Preload for performance -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Performance optimizations -->
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+    <link rel="dns-prefetch" href="//cdn.jsdelivr.net">
+    <link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <link rel="dns-prefetch" href="//unpkg.com">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Critical CSS for preloader performance -->
+    <style>
+        /* Critical preloader styles for instant display */
+        #preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.6); /* White background with 60% opacity */
+            backdrop-filter: blur(10px); /* Add subtle blur effect */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+        }
+        .preloader-content {
+            text-align: center;
+            color: #1f2937; /* Dark text color for white background */
+        }
+        .spinner {
+            width: 60px;
+            height: 60px;
+            border: 4px solid rgba(99, 102, 241, 0.3); /* Use primary color with opacity */
+            border-top: 4px solid #6366f1; /* Use primary color */
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+            margin: 0 auto 20px;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+    <!-- Custom Mouse Pointer -->
+    <div class="custom-mouse-pointer" id="customMousePointer"></div>
+    
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="preloader-content">
+            <div class="spinner"></div>
+            <div class="loading-text">
+                <span class="typing-text"></span>
+                <span class="cursor">|</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress-bar"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top" id="navbar">
+        <div class="container">
+            <a class="navbar-brand" href="#home">
+                <i class="fas fa-code brand-icon"></i>
+                <span class="brand-text">Portfolio</span>
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#journey">Journey</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#portfolio">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#testimonials">Testimonials</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <button class="btn btn-outline-primary theme-toggle" id="themeToggle">
+                            <i class="fas fa-moon"></i>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="hero-background">
+            <div class="particles"></div>
+            <div class="gradient-waves"></div>
+        </div>
+        <div class="container">
+            <div class="row align-items-center min-vh-100">
+                <div class="col-lg-8 mx-auto text-center">
+                    <div class="hero-content" data-aos="fade-up" data-aos-delay="200">
+                        <h1 class="hero-title">
+                            Hi, I'm <span class="highlight">Razan Kumar Sarraf</span>
+                        </h1>
+                        <div class="hero-subtitle">
+                            <span class="typing-text-hero"></span>
+                            <span class="cursor-hero">|</span>
+                        </div>
+                        <p class="hero-description">
+                            Passionate Full Stack Developer & Designer creating innovative digital experiences
+                        </p>
+                        <div class="hero-buttons">
+                            <a href="#portfolio" class="btn btn-primary btn-lg me-3">
+                                <i class="fas fa-eye me-2"></i>View Projects
+                            </a>
+                            <a href="#contact" class="btn btn-outline-primary btn-lg">
+                                <i class="fas fa-envelope me-2"></i>Contact Me
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center mb-5">
+                    <h2 class="section-title" data-aos="fade-up">About Me</h2>
+                    <div class="section-divider"></div>
+                </div>
+            </div>
+            <div class="row align-items-center">
+                <div class="col-lg-4 text-center mb-4" data-aos="fade-right">
+                    <div class="profile-container">
+                        <div class="profile-frame">
+                            <img src="images/profile.jpg" alt="Razan Kumar Sarraf - Profile Picture" class="profile-image">
+                            <div class="profile-glow"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-8" data-aos="fade-left">
+                    <div class="about-content">
+                        <h3 class="about-subtitle">Who I Am</h3>
+                        <p class="about-text">
+                            I'm a passionate and creative Full Stack Developer with over 5 years of experience in building modern web applications. 
+                            I love turning ideas into reality through clean, efficient code and beautiful user interfaces.
+                        </p>
+                        <p class="about-text">
+                            My expertise spans across frontend and backend technologies, with a keen eye for design and user experience. 
+                            I'm always eager to learn new technologies and take on challenging projects.
+                        </p>
+                        
+                        <div class="achievements mb-4">
+                            <div class="row text-center">
+                                <div class="col-md-4">
+                                    <div class="achievement-item">
+                                        <div class="achievement-number" data-target="50">0</div>
+                                        <div class="achievement-label">Projects Completed</div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="achievement-item">
+                                        <div class="achievement-number" data-target="5">0</div>
+                                        <div class="achievement-label">Years Experience</div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="achievement-item">
+                                        <div class="achievement-number" data-target="30">0</div>
+                                        <div class="achievement-label">Happy Clients</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="skills-section">
+                            <h4 class="skills-title">Technical Skills</h4>
+                            <div class="skills-grid">
+                                <div class="skill-item">
+                                    <div class="skill-info">
+                                        <span class="skill-name">HTML/CSS</span>
+                                        <span class="skill-percentage">95%</span>
+                                    </div>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" data-width="95"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item">
+                                    <div class="skill-info">
+                                        <span class="skill-name">JavaScript</span>
+                                        <span class="skill-percentage">90%</span>
+                                    </div>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" data-width="90"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item">
+                                    <div class="skill-info">
+                                        <span class="skill-name">React</span>
+                                        <span class="skill-percentage">85%</span>
+                                    </div>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" data-width="85"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item">
+                                    <div class="skill-info">
+                                        <span class="skill-name">Node.js</span>
+                                        <span class="skill-percentage">80%</span>
+                                    </div>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" data-width="80"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="about-buttons mt-4">
+                            <button type="button" class="btn btn-primary me-3" onclick="downloadCV()">
+                                <i class="fas fa-eye me-2"></i>View CV
+                            </button>
+                            <button type="button" class="btn btn-outline-primary" onclick="scrollToPortfolio()">
+                                <i class="fas fa-briefcase me-2"></i>View Work
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience & Education Section -->
+    <section id="journey" class="journey-section py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center mb-5">
+                    <h2 class="section-title" data-aos="fade-up">
+                        <span class="title-icon">🚀</span>
+                        Experience & Education
+                        <span class="title-icon">🎓</span>
+                    </h2>
+                    <p class="section-subtitle" data-aos="fade-up" data-aos-delay="200">
+                        My professional journey and academic achievements
+                    </p>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="journey-grid">
+                        <!-- Experience Section -->
+                        <div class="journey-section-group" data-aos="fade-up" data-aos-delay="100">
+                            <div class="section-header">
+                                <div class="section-icon">
+                                    <i class="fas fa-briefcase"></i>
+                                </div>
+                                <h3>Professional Experience</h3>
+                                <div class="section-line"></div>
+                            </div>
+                            
+                            <div class="experience-cards">
+                                <div class="experience-card">
+                                    <div class="card-header">
+                                        <div class="role-info">
+                                            <h4>Full Stack Developer</h4>
+                                            <div class="company">Fivizo</div>
+                                            <div class="duration">
+                                                <i class="fas fa-calendar-alt"></i>
+                                                2025 - Present
+                                            </div>
+                                        </div>
+                                        <div class="status-badge current">Current</div>
+                                    </div>
+                                    <p class="description">
+                                        Leading development of enterprise web applications using modern technologies. Collaborating with cross-functional teams to deliver high-quality software solutions.
+                                    </p>
+                                    <div class="tech-stack">
+                                        <span class="tech-item">React.js</span>
+                                        <span class="tech-item">Node.js</span>
+                                        <span class="tech-item">MongoDB</span>
+                                        <span class="tech-item">AWS</span>
+                                    </div>
+                                    <div class="achievements">
+                                        <h5>Key Achievements:</h5>
+                                        <ul>
+                                            <li>Developed 5+ client applications with 99.9% uptime</li>
+                                            <li>Reduced application load time by 40% through optimization</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                
+                                <div class="experience-card">
+                                    <div class="card-header">
+                                        <div class="role-info">
+                                            <h4>Frontend Developer</h4>
+                                            <div class="company">Fivizo</div>
+                                            <div class="duration">
+                                                <i class="fas fa-calendar-alt"></i>
+                                                2024 - 2025
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="description">
+                                        Built responsive and interactive user interfaces for various web applications. Focused on creating seamless user experiences and optimizing performance.
+                                    </p>
+                                    <div class="tech-stack">
+                                        <span class="tech-item">Vue.js</span>
+                                        <span class="tech-item">CSS3</span>
+                                        <span class="tech-item">JavaScript</span>
+                                        <span class="tech-item">Bootstrap</span>
+                                    </div>
+                                    <div class="achievements">
+                                        <h5>Key Achievements:</h5>
+                                        <ul>
+                                            <li>Created 10+ responsive websites for clients</li>
+                                            <li>Improved website accessibility scores by 25%</li>
+                                            <li>Collaborated with design team on UI/UX improvements</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                
+                                <div class="experience-card">
+                                    <div class="card-header">
+                                        <div class="role-info">
+                                            <h4>Freelance Developer</h4>
+                                            <div class="company">Self-Employed</div>
+                                            <div class="duration">
+                                                <i class="fas fa-calendar-alt"></i>
+                                                2023 - 2024
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="description">
+                                        Worked with various clients to develop custom web solutions, e-commerce platforms, and business applications. Managed projects from conception to deployment.
+                                    </p>
+                                    <div class="tech-stack">
+                                        <span class="tech-item">HTML5</span>
+                                        <span class="tech-item">CSS3</span>
+                                        <span class="tech-item">JavaScript</span>
+                                        <span class="tech-item">PHP</span>
+                                    </div>
+                                    <div class="achievements">
+                                        <h5>Key Achievements:</h5>
+                                        <ul>
+                                            <li>Completed 15+ successful client projects</li>
+                                            <li>Maintained 100% client satisfaction rate</li>
+                                            <li>Developed custom CMS solutions for small businesses</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Education Section -->
+                        <div class="journey-section-group" data-aos="fade-up" data-aos-delay="200">
+                            <div class="section-header">
+                                <div class="section-icon">
+                                    <i class="fas fa-graduation-cap"></i>
+                                </div>
+                                <h3>Academic Journey</h3>
+                                <div class="section-line"></div>
+                            </div>
+                            
+                            <div class="education-cards">
+                                <div class="education-card">
+                                    <div class="card-header">
+                                        <div class="degree-info">
+                                            <h4>BSc(Hons) Computer Science with AI</h4>
+                                            <div class="institution">Sunway College</div>
+                                            <div class="duration">
+                                                <i class="fas fa-calendar-alt"></i>
+                                                Running
+                                            </div>
+                                        </div>
+                                        <div class="status-badge ongoing">Ongoing</div>
+                                    </div>
+                                    <p class="description">
+                                        Specialized in Software Engineering with focus on web development, data structures, algorithms, and database management.
+                                    </p>
+                                    <div class="specializations">
+                                        <span class="specialization">Software Engineering</span>
+                                        <span class="specialization">Web Development</span>
+                                        <span class="specialization">Data Structures</span>
+                                        <span class="specialization">AI & Machine Learning</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio-section py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center mb-5">
+                    <h2 class="section-title" data-aos="fade-up">My Projects</h2>
+                    <div class="section-divider"></div>
+                </div>
+            </div>
+            
+            <!-- Portfolio Filters -->
+            <div class="row mb-4">
+                <div class="col-lg-12 text-center">
+                    <div class="portfolio-filters" data-aos="fade-up" data-aos-delay="200">
+                        <button class="filter-btn active" data-filter="all">All</button>
+                        <button class="filter-btn" data-filter="web">Web Development</button>
+                        <button class="filter-btn" data-filter="mobile">Mobile Apps</button>
+                        <button class="filter-btn" data-filter="design">UI/UX Design</button>
+                        <button class="filter-btn" data-filter="data">Data Science</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Portfolio Grid -->
+            <div class="row" id="portfolioGrid">
+                <!-- Portfolio Item 1 -->
+                <div class="col-lg-4 col-md-6 mb-4 portfolio-item" data-category="web" data-aos="fade-up" data-aos-delay="100">
+                    <div class="portfolio-card">
+                        <div class="portfolio-image">
+                            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=300&fit=crop&crop=center" alt="E-Commerce Platform" class="img-fluid">
+                            <div class="portfolio-overlay">
+                                <div class="portfolio-links">
+                                    <a href="https://your-ecommerce-demo.com" class="portfolio-link" target="_blank" title="Live Demo">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                    <a href="https://github.com/RazanSarraf77/ecommerce-platform" class="portfolio-link" target="_blank" title="View Code">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="portfolio-content">
+                            <h4 class="portfolio-title">E-Commerce Platform</h4>
+                            <p class="portfolio-description">
+                                A full-stack e-commerce solution built with React, Node.js, and MongoDB. Features user authentication, product management, shopping cart, and payment integration.
+                            </p>
+                            <div class="portfolio-tags">
+                                <span class="tag">React</span>
+                                <span class="tag">Node.js</span>
+                                <span class="tag">MongoDB</span>
+                            </div>
+                            <div class="portfolio-actions mt-3">
+                                <button type="button" class="btn btn-sm btn-primary me-2" onclick="openProjectDemo('ecommerce', 'E-Commerce Platform', 'A full-stack e-commerce solution built with React, Node.js, and MongoDB. Features user authentication, product management, shopping cart, and payment integration.', ['React', 'Node.js', 'MongoDB'], 'https://github.com/RazanSarraf77/ecommerce-platform', 'https://your-ecommerce-demo.com')">
+                                    <i class="fas fa-play-circle me-1"></i>Live Demo
+                                </button>
+
+                                <a href="https://github.com/RazanSarraf77/ecommerce-platform" class="btn btn-sm btn-outline-primary" target="_blank">
+                                    <i class="fab fa-github me-1"></i>View Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Portfolio Item 2 -->
+                <div class="col-lg-4 col-md-6 mb-4 portfolio-item" data-category="mobile" data-aos="fade-up" data-aos-delay="200">
+                    <div class="portfolio-card">
+                        <div class="portfolio-image">
+                            <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=400&h=300&fit=crop&crop=center" alt="Task Management App" class="img-fluid">
+                            <div class="portfolio-overlay">
+                                <div class="portfolio-links">
+                                    <a href="https://your-taskapp-demo.com" class="portfolio-link" target="_blank" title="Live Demo">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                    <a href="https://github.com/RazanSarraf77/task-management-app" class="portfolio-link" target="_blank" title="View Code">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="portfolio-content">
+                            <h4 class="portfolio-title">Task Management App</h4>
+                            <p class="portfolio-description">
+                                A cross-platform mobile app for task management with real-time synchronization. Includes task creation, priority levels, due dates, and team collaboration features.
+                            </p>
+                            <div class="portfolio-tags">
+                                <span class="tag">React Native</span>
+                                <span class="tag">Firebase</span>
+                                <span class="tag">Redux</span>
+                            </div>
+                            <div class="portfolio-actions mt-3">
+                                <button type="button" class="btn btn-sm btn-primary me-2" onclick="openProjectDemo('taskapp', 'Task Management App', 'A cross-platform mobile app for task management with real-time synchronization. Includes task creation, priority levels, due dates, and team collaboration features.', ['React Native', 'Firebase', 'Redux'], 'https://github.com/RazanSarraf77/task-management-app', 'https://your-taskapp-demo.com')">
+                                    <i class="fas fa-play-circle me-1"></i>Live Demo
+                                </button>
+                                <a href="https://github.com/RazanSarraf77/task-management-app" class="btn btn-sm btn-outline-primary" target="_blank">
+                                    <i class="fab fa-github me-1"></i>View Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Portfolio Item 3 -->
+                <div class="col-lg-4 col-md-6 mb-4 portfolio-item" data-category="design" data-aos="fade-up" data-aos-delay="300">
+                    <div class="portfolio-card">
+                        <div class="portfolio-image">
+                            <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?w=400&h=300&fit=crop&crop=center" alt="Brand Identity Design" class="img-fluid">
+                            <div class="portfolio-overlay">
+                                <div class="portfolio-links">
+                                    <a href="https://your-brand-demo.com" class="portfolio-link" target="_blank" title="View Portfolio">
+                                        <i class="fas fa-eye"></i>
+                                    </a>
+                                    <a href="https://github.com/RazanSarraf77/brand-identity" class="portfolio-link" target="_blank" title="View Assets">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="portfolio-content">
+                            <h4 class="portfolio-title">Brand Identity Design</h4>
+                            <p class="portfolio-description">
+                                Complete brand identity design including logo, color palette, typography, and comprehensive marketing materials for a modern tech startup.
+                            </p>
+                            <div class="portfolio-tags">
+                                <span class="tag">Figma</span>
+                                <span class="tag">Adobe Creative Suite</span>
+                                <span class="tag">Branding</span>
+                            </div>
+                            <div class="portfolio-actions mt-3">
+                                <button type="button" class="btn btn-sm btn-primary me-2" onclick="openProjectDemo('brand', 'Brand Identity Design', 'Complete brand identity design including logo, color palette, typography, and comprehensive marketing materials for a modern tech startup.', ['Figma', 'Adobe Creative Suite', 'Branding'], 'https://github.com/RazanSarraf77/brand-identity', 'https://your-brand-demo.com')">
+                                    <i class="fas fa-play-circle me-1"></i>Live Demo
+                                </button>
+                                <a href="https://github.com/RazanSarraf77/brand-identity" class="btn btn-sm btn-outline-primary" target="_blank">
+                                    <i class="fab fa-github me-1"></i>View Assets
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Portfolio Item 4 -->
+                <div class="col-lg-4 col-md-6 mb-4 portfolio-item" data-category="web" data-aos="fade-up" data-aos-delay="400">
+                    <div class="portfolio-card">
+                        <div class="portfolio-image">
+                            <img src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=400&h=300&fit=crop&crop=center" alt="Blog Platform" class="img-fluid">
+                            <div class="portfolio-overlay">
+                                <div class="portfolio-links">
+                                    <a href="https://your-blog-demo.com" class="portfolio-link" target="_blank" title="Live Demo">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                    <a href="https://github.com/RazanSarraf77/blog-platform" class="portfolio-link" target="_blank" title="View Code">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="portfolio-content">
+                            <h4 class="portfolio-title">Blog Platform</h4>
+                            <p class="portfolio-description">
+                                A modern blog platform with content management system, SEO optimization, and advanced features like comments, categories, and user management.
+                            </p>
+                            <div class="portfolio-tags">
+                                <span class="tag">Vue.js</span>
+                                <span class="tag">Laravel</span>
+                                <span class="tag">MySQL</span>
+                            </div>
+                            <div class="portfolio-actions mt-3">
+                                <button type="button" class="btn btn-sm btn-primary me-2" onclick="openProjectDemo('blog', 'Blog Platform', 'A modern blog platform with content management system, SEO optimization, and advanced features like comments, categories, and user management.', ['Vue.js', 'Laravel', 'MySQL'], 'https://github.com/RazanSarraf77/blog-platform', 'https://your-blog-demo.com')">
+                                    <i class="fas fa-play-circle me-1"></i>Live Demo
+                                </button>
+                                <a href="https://github.com/RazanSarraf77/blog-platform" class="btn btn-sm btn-outline-primary" target="_blank">
+                                    <i class="fab fa-github me-1"></i>View Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Portfolio Item 5 -->
+                <div class="col-lg-4 col-md-6 mb-4 portfolio-item" data-category="data" data-aos="fade-up" data-aos-delay="500">
+                    <div class="portfolio-card">
+                        <div class="portfolio-image">
+                            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=300&fit=crop&crop=center" alt="Data Analytics Dashboard" class="img-fluid">
+                            <div class="portfolio-overlay">
+                                <div class="portfolio-links">
+                                    <a href="https://your-dashboard-demo.com" class="portfolio-link" target="_blank" title="Live Demo">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                    <a href="https://github.com/RazanSarraf77/data-dashboard" class="portfolio-link" target="_blank" title="View Code">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="portfolio-content">
+                            <h4 class="portfolio-title">Data Analytics Dashboard</h4>
+                            <p class="portfolio-description">
+                                Interactive dashboard for data visualization and business intelligence insights. Features real-time data updates, interactive charts, and customizable widgets.
+                            </p>
+                            <div class="portfolio-tags">
+                                <span class="tag">Python</span>
+                                <span class="tag">D3.js</span>
+                                <span class="tag">Pandas</span>
+                            </div>
+                            <div class="portfolio-actions mt-3">
+                                <button type="button" class="btn btn-sm btn-primary me-2" onclick="openProjectDemo('dashboard', 'Data Analytics Dashboard', 'Interactive dashboard for data visualization and business intelligence insights. Features real-time data updates, interactive charts, and customizable widgets.', ['Python', 'D3.js', 'Pandas'], 'https://github.com/RazanSarraf77/data-dashboard', 'https://your-dashboard-demo.com')">
+                                    <i class="fas fa-play-circle me-1"></i>Live Demo
+                                </button>
+                                <a href="https://github.com/RazanSarraf77/data-dashboard" class="btn btn-sm btn-outline-primary" target="_blank">
+                                    <i class="fab fa-github me-1"></i>View Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Portfolio Item 6 -->
+                <div class="col-lg-4 col-md-6 mb-4 portfolio-item" data-category="mobile" data-aos="fade-up" data-aos-delay="600">
+                    <div class="portfolio-card">
+                        <div class="portfolio-image">
+                            <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=300&fit=crop&crop=center" alt="Fitness Tracking App" class="img-fluid">
+                            <div class="portfolio-overlay">
+                                <div class="portfolio-links">
+                                    <a href="https://your-fitness-demo.com" class="portfolio-link" target="_blank" title="Live Demo">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                    <a href="https://github.com/RazanSarraf77/fitness-app" class="portfolio-link" target="_blank" title="View Code">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="portfolio-content">
+                            <h4 class="portfolio-title">Fitness Tracking App</h4>
+                            <p class="portfolio-description">
+                                Mobile app for tracking workouts, nutrition, and health metrics with social features. Includes workout plans, progress tracking, and community challenges.
+                            </p>
+                            <div class="portfolio-tags">
+                                <span class="tag">Flutter</span>
+                                <span class="tag">Dart</span>
+                                <span class="tag">SQLite</span>
+                            </div>
+                            <div class="portfolio-actions mt-3">
+                                <button type="button" class="btn btn-sm btn-primary me-2" onclick="openProjectDemo('fitness', 'Fitness Tracking App', 'Mobile app for tracking workouts, nutrition, and health metrics with social features. Includes workout plans, progress tracking, and community challenges.', ['Flutter', 'Dart', 'SQLite'], 'https://github.com/RazanSarraf77/fitness-app', 'https://your-fitness-demo.com')">
+                                    <i class="fas fa-play-circle me-1"></i>Live Demo
+                                </button>
+                                <a href="https://github.com/RazanSarraf77/fitness-app" class="btn btn-sm btn-outline-primary" target="_blank">
+                                    <i class="fab fa-github me-1"></i>View Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials-section py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center mb-5">
+                    <h2 class="section-title" data-aos="fade-up">What Clients Say</h2>
+                    <div class="section-divider"></div>
+                    <p class="section-subtitle" data-aos="fade-up" data-aos-delay="200">
+                        Don't just take my word for it - hear what my clients have to say about working together
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div id="testimonialsCarousel" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active" data-aos="fade-up">
+                                <div class="testimonial-item text-center">
+                                    <div class="testimonial-content">
+                                        <div class="testimonial-rating mb-3">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                        <p class="testimonial-text">
+                                            "Working with Razan was an absolute pleasure. They delivered our project on time, 
+                                            within budget, and exceeded our expectations. The attention to detail and user experience 
+                                            was outstanding."
+                                        </p>
+                                        <div class="testimonial-author">
+                                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=60&h=60&fit=crop&crop=face" alt="John Smith" class="testimonial-avatar">
+                                            <div class="testimonial-info">
+                                                <h5 class="testimonial-name">John Smith</h5>
+                                                <p class="testimonial-position">CEO, TechStart Inc.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item" data-aos="fade-up">
+                                <div class="testimonial-item text-center">
+                                    <div class="testimonial-content">
+                                        <div class="testimonial-rating mb-3">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                        <p class="testimonial-text">
+                                            "The quality of work and professionalism displayed by Razan is exceptional. 
+                                            They transformed our vision into a beautiful, functional website that perfectly 
+                                            represents our brand."
+                                        </p>
+                                        <div class="testimonial-author">
+                                            <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?w=60&h=60&fit=crop&crop=face" alt="Sarah Johnson" class="testimonial-avatar">
+                                            <div class="testimonial-info">
+                                                <h5 class="testimonial-name">Sarah Johnson</h5>
+                                                <p class="testimonial-position">Marketing Director, Creative Co.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item" data-aos="fade-up">
+                                <div class="testimonial-item text-center">
+                                    <div class="testimonial-content">
+                                        <div class="testimonial-rating mb-3">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                        <p class="testimonial-text">
+                                            "Razan's technical expertise and creative problem-solving skills are remarkable. 
+                                            They helped us overcome complex challenges and delivered a solution that exceeded 
+                                            our requirements."
+                                        </p>
+                                        <div class="testimonial-author">
+                                            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=60&h=60&fit=crop&crop=face" alt="Mike Davis" class="testimonial-avatar">
+                                            <div class="testimonial-info">
+                                                <h5 class="testimonial-name">Mike Davis</h5>
+                                                <p class="testimonial-position">CTO, Innovation Labs</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#testimonialsCarousel" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#testimonialsCarousel" data-bs-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center mb-5">
+                    <h2 class="section-title" data-aos="fade-up">Get In Touch</h2>
+                    <div class="section-divider"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="contact-form-container" data-aos="fade-up">
+                        <form id="contactForm" action="https://formspree.io/f/mkgzkzvj" method="POST" class="contact-form">
+                            <!-- Hidden input for Formspree -->
+                            <input type="hidden" name="_next" value="https://yourdomain.com/thank-you">
+                            <input type="hidden" name="_captcha" value="false">
+                            <input type="hidden" name="_subject" value="New Contact Form Submission - Portfolio Website">
+                            
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" id="name" name="name" placeholder="Your Name" required>
+                                        <label for="name" class="form-label">Your Name</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <div class="form-group">
+                                        <input type="email" class="form-control" id="email" name="email" placeholder="Your Email" required>
+                                        <label for="email" class="form-label">Your Email</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject" required>
+                                    <label for="subject" class="form-label">Subject</label>
+                                </div>
+                            </div>
+                            <div class="mb-4">
+                                <div class="form-group">
+                                    <textarea class="form-control" id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+                                    <label for="message" class="form-label">Your Message</label>
+                                </div>
+                            </div>
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-primary btn-lg">
+                                    <i class="fas fa-paper-plane me-2"></i>Send Message
+                                </button>
+                            </div>
+                        </form>
+                        
+                        <div class="contact-info mt-5">
+                            <div class="row text-center">
+                                <div class="col-md-4 mb-4">
+                                    <div class="contact-item">
+                                        <div class="contact-icon">
+                                            <i class="fas fa-envelope"></i>
+                                        </div>
+                                        <h5>Email</h5>
+                                        <p>razansarraf739@gmail.com</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mb-4">
+                                    <div class="contact-item">
+                                        <div class="contact-icon">
+                                            <i class="fas fa-phone"></i>
+                                        </div>
+                                        <h5>Phone</h5>
+                                        <p>+977-9821885714</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mb-4">
+                                    <div class="contact-item">
+                                        <div class="contact-icon">
+                                            <i class="fas fa-map-marker-alt"></i>
+                                        </div>
+                                        <h5>Location</h5>
+                                        <p>Kathmandu, Nepal</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="social-links text-center mt-4">
+                            <a href="https://www.linkedin.com/in/razan-sarraf/" class="social-link" target="_blank" title="Connect on LinkedIn">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="https://github.com/RazanSarraf77" class="social-link" target="_blank" title="View GitHub Profile">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="mailto:razansarraf739@gmail.com" class="social-link" title="Send Email">
+                                <i class="fas fa-envelope"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Demo Modal -->
+    <div class="modal fade demo-modal" id="projectDemoModal" tabindex="-1" aria-labelledby="projectDemoModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="projectDemoModalLabel">Project Demo</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="demo-content">
+                        <div class="demo-header mb-4">
+                            <div class="demo-project-info">
+                                <h4 class="demo-project-title mb-2"></h4>
+                                <p class="demo-project-description mb-3"></p>
+                                <div class="demo-project-tags"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="demo-main-content">
+                            <!-- Demo Navigation Tabs -->
+                            <ul class="nav nav-tabs" id="demoTabs" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link active" id="demo-tab" data-bs-toggle="tab" data-bs-target="#demo-content" type="button" role="tab" aria-controls="demo-content" aria-selected="true">
+                                        <i class="fas fa-play-circle me-2"></i>Live Demo
+                                    </button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="features-tab" data-bs-toggle="tab" data-bs-target="#features-content" type="button" role="tab" aria-controls="features-content" aria-selected="false">
+                                        <i class="fas fa-list-check me-2"></i>Features
+                                    </button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="tech-tab" data-bs-toggle="tab" data-bs-target="#tech-content" type="button" role="tab" aria-controls="tech-content" aria-selected="false">
+                                        <i class="fas fa-code me-2"></i>Technology
+                                    </button>
+                                </li>
+                            </ul>
+                            
+                            <!-- Tab Content -->
+                            <div class="tab-content mt-4" id="demoTabContent">
+                                <!-- Live Demo Tab -->
+                                <div class="tab-pane fade show active" id="demo-content" role="tabpanel" aria-labelledby="demo-tab">
+                                    <div class="demo-frame-container">
+                                        <div class="demo-loading">
+                                            <div class="spinner-border text-primary" role="status">
+                                                <span class="visually-hidden">Loading...</span>
+                                            </div>
+                                            <p class="mt-2">Loading demo...</p>
+                                        </div>
+                                        <iframe id="demoIframe" class="demo-iframe" frameborder="0" style="display: none;"></iframe>
+                                    </div>
+                                </div>
+                                
+                                <!-- Features Tab -->
+                                <div class="tab-pane fade" id="features-content" role="tabpanel" aria-labelledby="features-tab">
+                                    <div class="features-list" id="featuresList">
+                                        <!-- Features will be populated dynamically -->
+                                    </div>
+                                </div>
+                                
+                                <!-- Technology Tab -->
+                                <div class="tab-pane fade" id="tech-content" role="tabpanel" aria-labelledby="tech-tab">
+                                    <div class="tech-stack" id="techStack">
+                                        <!-- Tech stack will be populated dynamically -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="d-flex justify-content-between w-100">
+                        <div class="demo-links">
+                            <a href="#" class="btn btn-outline-primary btn-sm me-2" id="viewCodeBtn" target="_blank">
+                                <i class="fab fa-github me-1"></i>View Code
+                            </a>
+                            <a href="#" class="btn btn-outline-secondary btn-sm" id="fullScreenBtn">
+                                <i class="fas fa-expand me-1"></i>Full Screen
+                            </a>
+                        </div>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Enhanced Simple Footer -->
+    <footer class="simple-footer py-3">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-0 copyright">&copy; 2024 Razan Kumar Sarraf. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <div class="legal-links">
+                        <a href="#" onclick="showPrivacyPolicy()">Privacy Policy</a>
+                        <span class="separator">|</span>
+                        <a href="#" onclick="showTermsOfService()">Terms of Service</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- AOS Animation Library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+</html>
